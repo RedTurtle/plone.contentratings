@@ -1,28 +1,27 @@
-from zope.interface import implements
-from zope.component import adapts
+import csv
 
+from DateTime import DateTime
+from Products.AdvancedQuery import Ge
 from Products.CMFCore.utils import getToolByName
-
+from cStringIO import StringIO
 from plone.app.controlpanel.form import ControlPanelForm
 from plone.fieldsets.fieldsets import FormFieldsets
-from zope.app.form.browser.objectwidget import ObjectWidget
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile 
-
 from zope.app.component.interfaces import ISite
-from zope.formlib import form
-
+from zope.app.form.browser.objectwidget import ObjectWidget
+from zope.component import adapts
 from zope.component import getUtility
+from zope.formlib import form
+from zope.formlib.form import FormFields
+from zope.interface import implements
 from zope.schema.interfaces import IVocabularyFactory
-from zope.i18n import translate
 
 from plone.contentratings.interfaces import _
-
 from plone.contentratings.interfaces import IRatingCategoryAssignment
 from plone.contentratings.browser.interfaces import IEditCategoryAssignment
 from plone.contentratings.browser.interfaces import ICategoryAssignment
 from plone.contentratings.browser.interfaces import ICategoryContainer
+from plone.contentratings.browser.interfaces import IRatingExport
 from plone.contentratings.browser.category_manage import hr_categories_widget, display_categories_widget
-from plone.contentratings.interfaces import IRatingCategoryAssignment
 
 
 class CategoryAssignment(object):
@@ -238,8 +237,8 @@ u'may specify a title, description, conditions for viewing and setting '
 u'ratings, a view to display the rating, and a relative order number.  '
 u'Categories which are defined at a lower level (e.g., globally) may not be '
 u'edited. You need to save your changes after adding or removing categories')
-
 categories.required = False
+
 
 class ContentRatingsControlPanel(ControlPanelForm):
 
@@ -264,3 +263,34 @@ class ContentRatingsControlPanel(ControlPanelForm):
         self.request.form['type_id'] = type_id
         return self()
 
+
+class RatingExportAdapter(object):
+    implements(IRatingExport)
+    adapts(ISite)
+
+    export_rating = True
+
+    def __init__(self, context):
+        self.context = context
+
+
+class ContentRatingsExportControlPanel(ControlPanelForm):
+    form_name = _(u"Ratings export")
+    label = _(u"Ratings export")
+    form_fields = FormFields(IRatingExport)
+
+    @form.action(_(u'Export ratings'), name=u'export')
+    def export(self, action, data):
+        """Does nothing except reload the form"""
+        query = Ge('average_rating', 0)
+        brains = self.context.portal_catalog.evalAdvancedQuery(query)
+        response = StringIO()
+        writer = csv.writer(response)
+        # header
+        writer.writerow(["Path", "Number of votes", "Average rating"])
+        for brain in brains:
+            writer.writerow([brain.getPath(), brain.average_rating[1], brain.average_rating[0]])
+        value = response.getvalue()
+        self.request.RESPONSE.setHeader('Content-Type', 'text/csv')
+        self.request.RESPONSE.setHeader('Content-Disposition', 'attachment;filename=ratings-export-%s.csv' % (DateTime().strftime("%Y%m%d-%H%M")))
+        return value

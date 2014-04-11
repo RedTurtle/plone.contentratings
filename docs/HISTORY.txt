@@ -5,6 +5,7 @@ HISTORY
 ------------------
 
 - Restore Plone 3 compatibility. [thet]
+- Add export ratings features [amleczko]
 
 1.0.1 (2012-06-04)
 ------------------

@@ -5,15 +5,22 @@
 
  <configlet title="Ratings" action_id="contentratings"
     appId="plone.contentratings" category="Products"
-    condition_expr="python:True"
-    icon_expr="string:${portal_url}/++resource++plone.contentratings.resources/ratings_icon.png"
+    condition_expr=""
     i18n:attributes="title"
     url_expr="string:${portal_url}/contentratings-controlpanel"
     visible="True">
   <permission>Manage portal</permission>
-  
   Add a controlpanel for content ratings settings
-  
+</configlet>
+
+ <configlet title="Ratings export" action_id="contentratings_export"
+    appId="plone.contentratings" category="Products"
+    condition_expr=""
+    i18n:attributes="title"
+    url_expr="string:${portal_url}/contentratings-export-controlpanel"
+    visible="True">
+  <permission>Manage portal</permission>
+  Add a controlpanel for content ratings export
  </configlet>
 
 </object>
