@@ -1,7 +1,6 @@
+import os
 from setuptools import setup, find_packages
-import sys, os
-import xml.sax.saxutils
-from xml.dom.minidom import parse
+
 
 def read(*rnames):
     text = open(os.path.join(os.path.dirname(__file__), *rnames)).read()
@@ -16,7 +15,7 @@ description = read('README.txt') + '\n\n' + \
               read('docs', 'HISTORY.txt')
 
 setup(name='plone.contentratings',
-      version="1.0.1-2",
+      version="1.0.2-plone3",
       description="Plone support for the contentratings package",
       long_description=description,
       classifiers=[
@@ -41,7 +40,7 @@ setup(name='plone.contentratings',
           'archetypes.schemaextender',
       ],
       entry_points="""
-[z3c.autoinclude.plugin]
-target = plone
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-1.0.2 (unreleased)
+1.0.2-plone3 (unreleased)
 ------------------
 
 - Restore Plone 3 compatibility. [thet]
