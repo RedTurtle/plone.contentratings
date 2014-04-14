@@ -278,6 +278,7 @@ class ContentRatingsExportControlPanel(ControlPanelForm):
     form_name = _(u"Ratings export")
     label = _(u"Ratings export")
     form_fields = FormFields(IRatingExport)
+    description = _(u'Export form')
 
     @form.action(_(u'Export ratings'), name=u'export')
     def export(self, action, data):
