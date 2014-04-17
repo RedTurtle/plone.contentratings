@@ -74,7 +74,7 @@ msgstr "Tipo di Contenuto"
 
 #: ./browser/controlpanel.py:228
 msgid "Rating Assignments"
-msgstr ""
+msgstr "Assegnazione Valutazioni"
 
 #. Default: "Ratings"
 #: ./profiles/default/controlpanel.xml
