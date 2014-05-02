@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<atcttool xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    <topic_indexes i18n:domain="plone">
+
+        <index
+            name="average_rating"
+            enabled="True"
+            friendlyName="Average rating"
+            description="Average rating of all votes"
+            i18n:attributes="description; friendlyName">
+
+            <criteria>ATSimpleIntCriterion</criteria>
+
+        </index>
+
+    </topic_indexes>
+    <topic_metadata i18n:domain="plone">
+
+        <metadata
+            name="average_rating"
+            enabled="True"
+            friendlyName="Average rating"
+            description="Average rating of all votes"
+            />
+
+    </topic_metadata>
+</atcttool>

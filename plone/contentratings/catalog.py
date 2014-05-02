@@ -18,7 +18,7 @@ def average_rating(object):
     """Returns a tuple of the average rating and number of ratings for
     easy sorting"""
     adapter = _first_user_rating(object)
-    return (adapter.averageRating, adapter.numberOfRatings)
+    return adapter.averageRating
 
 @indexer(IDynamicType)
 def rating_users(object):

@@ -288,9 +288,9 @@ class ContentRatingsExportControlPanel(ControlPanelForm):
         response = StringIO()
         writer = csv.writer(response)
         # header
-        writer.writerow(["Path", "Number of votes", "Average rating"])
+        writer.writerow(["Path", "Average rating"])
         for brain in brains:
-            writer.writerow([brain.getPath(), brain.average_rating[1], brain.average_rating[0]])
+            writer.writerow([brain.getPath(), brain.average_rating])
         value = response.getvalue()
         self.request.RESPONSE.setHeader('Content-Type', 'text/csv')
         self.request.RESPONSE.setHeader('Content-Disposition', 'attachment;filename=ratings-export-%s.csv' % (DateTime().strftime("%Y%m%d-%H%M")))
