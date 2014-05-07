@@ -13,6 +13,18 @@
 
         </index>
 
+        <index
+            name="number_of_ratings"
+            enabled="True"
+            friendlyName="Number of ratings"
+            description="How many votes the item got"
+            i18n:attributes="description; friendlyName">
+
+            <criteria>ATSimpleIntCriterion</criteria>
+
+        </index>
+
+
     </topic_indexes>
     <topic_metadata i18n:domain="plone">
 
@@ -22,6 +34,14 @@
             friendlyName="Average rating"
             description="Average rating of all votes"
             />
+
+        <metadata
+            name="number_of_ratings"
+            enabled="True"
+            friendlyName="Number of ratings"
+            description="How many votes the item got"
+            />
+
 
     </topic_metadata>
 </atcttool>

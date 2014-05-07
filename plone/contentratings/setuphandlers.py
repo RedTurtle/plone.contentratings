@@ -28,6 +28,7 @@ def addKeyToCatalog(portal):
 
     WANTED_INDEXES = (('average_rating', 'FieldIndex'),
                       ('rating_users', 'KeywordIndex'),
+                      ('number_of_ratings', 'FieldIndex'),
                       )
 
     for name, meta_type in WANTED_INDEXES:
