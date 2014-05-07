@@ -1,7 +1,11 @@
+import logging
 from zope.app.component.hooks import setSite
 from zope.component import getSiteManager
 from plone.contentratings.browser.interfaces import ICategoryContainer
 from Products.CMFCore.utils import getToolByName
+
+logger = logging.getLogger('plone.contentratings')
+
 
 def uninstallVarious(context):
     """Remove all persistent configuration from the site manager"""
