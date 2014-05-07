@@ -17,7 +17,6 @@ from plone.contentratings.interfaces import IRatingCategoryAssignment
 from plone.contentratings.browser.interfaces import IEditCategoryAssignment
 from plone.contentratings.browser.interfaces import ICategoryAssignment
 from plone.contentratings.browser.interfaces import ICategoryContainer
-from plone.contentratings.browser.interfaces import IRatingExport
 from plone.contentratings.browser.category_manage import hr_categories_widget, display_categories_widget
 
 
@@ -259,14 +258,4 @@ class ContentRatingsControlPanel(ControlPanelForm):
         self.request.form.clear()
         self.request.form['type_id'] = type_id
         return self()
-
-
-class RatingExportAdapter(object):
-    implements(IRatingExport)
-    adapts(ISite)
-
-    export_rating = True
-
-    def __init__(self, context):
-        self.context = context
 

@@ -1,6 +1,7 @@
 from zope.app.component.hooks import setSite
 from zope.component import getSiteManager
 from plone.contentratings.browser.interfaces import ICategoryContainer
+from Products.CMFCore.utils import getToolByName
 
 def uninstallVarious(context):
     """Remove all persistent configuration from the site manager"""
@@ -26,7 +27,7 @@ def addKeyToCatalog(portal):
     indexables = []
 
     WANTED_INDEXES = (('average_rating', 'FieldIndex'),
-                      ('rating_users', 'FieldIndex'),
+                      ('rating_users', 'KeywordIndex'),
                       )
 
     for name, meta_type in WANTED_INDEXES:

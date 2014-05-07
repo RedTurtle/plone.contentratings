@@ -11,7 +11,7 @@ from zope.i18n import translate
 _ = MessageFactory('plone.contentratings')
 
 
-class ContentRatingsExportControlPanel(ControlPanelForm):
+class ContentRatingsExportView(BrowserView):
 
     def __call__(self):
         query = Ge('average_rating', 0)
