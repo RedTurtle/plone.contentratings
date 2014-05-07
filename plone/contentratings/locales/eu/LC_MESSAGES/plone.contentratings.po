@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-07-19 07:31+0000\n"
+"POT-Creation-Date: 2014-05-07 12:02+0000\n"
 "PO-Revision-Date: 2011-07-19 09:41+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,31 +14,35 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./browser/interfaces.py:42
+#: ./browser/interfaces.py:44
 msgid "Acquired Categories"
 msgstr "Hartutako kategoriak"
 
-#: ./browser/controlpanel.py:236
+#: ./browser/controlpanel.py:232
 msgid "Add, modify, or remove rating categories.  You may specify a title, description, conditions for viewing and setting ratings, a view to display the rating, and a relative order number.  Categories which are defined at a lower level (e.g., globally) may not be edited. You need to save your changes after adding or removing categories"
 msgstr "Bozketa kategoriak gehitu, aldatu edo ezabatu. Bakoitzarentzat izenburua, deskribapena, baimenak eta ordena zenbakia aukeratu ditzakezu. Globalki ezarrita dauden kategoriak ez dira editagarriak. Zure aldaketak gorde egin beharko dituzu kategoriak gehitu edo aldatzen dituzun bakoitzean"
 
-#: ./browser/interfaces.py:31
+#: ./browser/interfaces.py:33
 msgid "Assignment"
 msgstr "Esleipena"
 
-#: ./browser/interfaces.py:12
+#: ./browser/export.py:22
+msgid "Average rating"
+msgstr ""
+
+#: ./browser/interfaces.py:14
 msgid "Categories"
 msgstr "Kategoriak"
 
-#: ./browser/interfaces.py:13
+#: ./browser/interfaces.py:15
 msgid "Category"
 msgstr "Kategoria"
 
-#: ./browser/controlpanel.py:246
+#: ./browser/controlpanel.py:242
 msgid "Category Assignments"
 msgstr "Kategoria-esleipenak"
 
-#: ./browser/controlpanel.py:259
+#: ./browser/controlpanel.py:255
 msgid "Change Portal Type"
 msgstr "Mota aldatu"
 
@@ -46,7 +50,7 @@ msgstr "Mota aldatu"
 msgid "Check this box to add ratings to this item. Use the control panel to select the ratings shown on each content type."
 msgstr "Aukeratu hau elementu honi botuak gehitzeko. Erabili kontrol-panela elementu-mota bakoitzean agertuko diren bozketa-motak aukeratzeko."
 
-#: ./browser/controlpanel.py:229
+#: ./browser/controlpanel.py:225
 msgid "Choose a portal type from the list and select one or more rating categories to appear on that type. "
 msgstr "Aukeratu elementu-mota bat zerrendatik eta elementu-mota horietan agertuko diren bozketa kategoria bat edo gehiago-"
 
@@ -54,19 +58,27 @@ msgstr "Aukeratu elementu-mota bat zerrendatik eta elementu-mota horietan agertu
 msgid "Enable Ratings"
 msgstr "Bozketak aktibatu"
 
-#: ./browser/interfaces.py:37
+#: ./profiles/default/actions.xml
+msgid "Export rating"
+msgstr ""
+
+#: ./browser/interfaces.py:39
 msgid "Local Categories"
 msgstr "Kategoria lokalak"
 
-#: ./browser/controlpanel.py:235
+#: ./browser/controlpanel.py:231
 msgid "Manage Categories"
 msgstr "Kategoriak kudeatu"
 
-#: ./browser/interfaces.py:9
+#: ./browser/export.py:22
+msgid "Number of rates"
+msgstr ""
+
+#: ./browser/interfaces.py:10
 msgid "Portal Type"
 msgstr "Elementu-mota"
 
-#: ./browser/controlpanel.py:228
+#: ./browser/controlpanel.py:224
 msgid "Rating Assignments"
 msgstr "Bozketaren esleipenak"
 
@@ -74,19 +86,23 @@ msgstr "Bozketaren esleipenak"
 msgid "Ratings"
 msgstr "Botuak"
 
-#: ./browser/interfaces.py:23
+#: ./browser/interfaces.py:25
 msgid "Select the view for this category"
 msgstr "Aukeratu kategoria honen bista"
 
-#: ./browser/controlpanel.py:250
+#: ./browser/controlpanel.py:246
 msgid "Set the categories for portal types"
 msgstr "Elementu-motentzat kategoriak aukeratu"
 
-#: ./browser/controlpanel.py:251
+#: ./browser/controlpanel.py:247
 msgid "Settings related to content ratings."
 msgstr "Edukien bozketen inguruko ezarpenak"
 
-#: ./browser/interfaces.py:22
+#: ./browser/export.py:22
+msgid "URL"
+msgstr ""
+
+#: ./browser/interfaces.py:24
 msgid "View"
 msgstr "Ikusi"
 

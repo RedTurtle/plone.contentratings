@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-05-08 05:23+0000\n"
+"POT-Creation-Date: 2014-05-07 12:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,35 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone.contentratings\n"
 
-#: ./browser/interfaces.py:41
+#: ./browser/interfaces.py:44
 msgid "Acquired Categories"
 msgstr ""
 
-#: ./browser/controlpanel.py:236
+#: ./browser/controlpanel.py:232
 msgid "Add, modify, or remove rating categories.  You may specify a title, description, conditions for viewing and setting ratings, a view to display the rating, and a relative order number.  Categories which are defined at a lower level (e.g., globally) may not be edited. You need to save your changes after adding or removing categories"
 msgstr ""
 
-#: ./browser/interfaces.py:30
+#: ./browser/interfaces.py:33
 msgid "Assignment"
 msgstr ""
 
-#: ./browser/interfaces.py:11
+#: ./browser/export.py:22
+msgid "Average rating"
+msgstr ""
+
+#: ./browser/interfaces.py:14
 msgid "Categories"
 msgstr ""
 
-#: ./browser/interfaces.py:12
+#: ./browser/interfaces.py:15
 msgid "Category"
 msgstr ""
 
-#: ./browser/controlpanel.py:246
+#: ./browser/controlpanel.py:242
 msgid "Category Assignments"
 msgstr ""
 
-#: ./browser/controlpanel.py:259
+#: ./browser/controlpanel.py:255
 msgid "Change Portal Type"
 msgstr ""
 
@@ -49,7 +53,7 @@ msgstr ""
 msgid "Check this box to add ratings to this item. Use the control panel to select the ratings shown on each content type."
 msgstr ""
 
-#: ./browser/controlpanel.py:229
+#: ./browser/controlpanel.py:225
 msgid "Choose a portal type from the list and select one or more rating categories to appear on that type. "
 msgstr ""
 
@@ -57,45 +61,51 @@ msgstr ""
 msgid "Enable Ratings"
 msgstr ""
 
-#: ./browser/interfaces.py:36
+#: ./profiles/default/actions.xml
+msgid "Export rating"
+msgstr ""
+
+#: ./browser/interfaces.py:39
 msgid "Local Categories"
 msgstr ""
 
-#: ./browser/controlpanel.py:235
+#: ./browser/controlpanel.py:231
 msgid "Manage Categories"
 msgstr ""
 
-#: ./browser/interfaces.py:8
+#: ./browser/export.py:22
+msgid "Number of rates"
+msgstr ""
+
+#: ./browser/interfaces.py:10
 msgid "Portal Type"
 msgstr ""
 
-#: ./browser/controlpanel.py:228
+#: ./browser/controlpanel.py:224
 msgid "Rating Assignments"
 msgstr ""
 
-#. Default: "Ratings"
 #: ./profiles/default/controlpanel.xml
 msgid "Ratings"
 msgstr ""
 
-#. Default: "Ratings Settings"
-#: ./profiles/default/actionicons.xml
-msgid "Ratings Settings"
-msgstr ""
-
-#: ./browser/interfaces.py:22
+#: ./browser/interfaces.py:25
 msgid "Select the view for this category"
 msgstr ""
 
-#: ./browser/controlpanel.py:250
+#: ./browser/controlpanel.py:246
 msgid "Set the categories for portal types"
 msgstr ""
 
-#: ./browser/controlpanel.py:251
+#: ./browser/controlpanel.py:247
 msgid "Settings related to content ratings."
 msgstr ""
 
-#: ./browser/interfaces.py:21
+#: ./browser/export.py:22
+msgid "URL"
+msgstr ""
+
+#: ./browser/interfaces.py:24
 msgid "View"
 msgstr ""
 

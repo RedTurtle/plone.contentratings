@@ -48,9 +48,3 @@ class ICategoryContainer(Interface):
             required=False,
             )
 
-
-class IRatingExport(Interface):
-    export_rating = Bool(title=_(u'Export rating'),
-            description=_(u"This form allows you to export"
-                "all ratings in CSV format. Are you sure?"),
-            readonly=True)

@@ -1,7 +1,4 @@
-import csv
-
 from DateTime import DateTime
-from Products.AdvancedQuery import Ge
 from Products.CMFCore.utils import getToolByName
 from cStringIO import StringIO
 from plone.app.controlpanel.form import ControlPanelForm
@@ -273,25 +270,3 @@ class RatingExportAdapter(object):
     def __init__(self, context):
         self.context = context
 
-
-class ContentRatingsExportControlPanel(ControlPanelForm):
-    form_name = _(u"Ratings export")
-    label = _(u"Ratings export")
-    form_fields = FormFields(IRatingExport)
-    description = _(u'Export form')
-
-    @form.action(_(u'Export ratings'), name=u'export')
-    def export(self, action, data):
-        """Does nothing except reload the form"""
-        query = Ge('average_rating', 0)
-        brains = self.context.portal_catalog.evalAdvancedQuery(query)
-        response = StringIO()
-        writer = csv.writer(response)
-        # header
-        writer.writerow(["Path", "Average rating"])
-        for brain in brains:
-            writer.writerow([brain.getPath(), brain.average_rating])
-        value = response.getvalue()
-        self.request.RESPONSE.setHeader('Content-Type', 'text/csv')
-        self.request.RESPONSE.setHeader('Content-Disposition', 'attachment;filename=ratings-export-%s.csv' % (DateTime().strftime("%Y%m%d-%H%M")))
-        return value

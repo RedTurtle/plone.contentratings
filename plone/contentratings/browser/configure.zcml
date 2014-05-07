@@ -34,10 +34,10 @@
         />
 
     <browser:page
-        name="contentratings-export-controlpanel"
+        name="contentratings-export"
         for="zope.app.component.interfaces.ISite"
-        class=".controlpanel.ContentRatingsExportControlPanel"
-        permission="cmf.ManagePortal"
+        class=".export.ContentRatingsExportView"
+        permission="plone.contentratings.permissions.ExportRating"
         />
 
     <browser:pages

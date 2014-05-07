@@ -9,10 +9,15 @@
 
   <includeDependencies package="." />
 
-  <include zcml:condition="have plone-4" package="Products.CMFCore" file="permissions.zcml" />
+  <include package="Products.CMFCore" />
   
   <five:registerPackage package="." initialize=".initialize" />
   <i18n:registerTranslations directory="locales" />
+
+  <permission
+    id="plone.contentratings.permissions.ExportRating"
+    title="Content Ratings: Export Ratings"
+    />
   
   <contentratings:category
       for="Products.CMFCore.interfaces.IDynamicType"

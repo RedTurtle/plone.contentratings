@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-05-08 05:23+0000\n"
+"POT-Creation-Date: 2014-05-07 12:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,38 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone.contentratings\n"
 
-#: ./browser/interfaces.py:41
+#: ./browser/interfaces.py:44
 msgid "Acquired Categories"
 msgstr "Categorie Acquisite"
 
-#: ./browser/controlpanel.py:236
+#: ./browser/controlpanel.py:232
 msgid "Add, modify, or remove rating categories.  You may specify a title, description, conditions for viewing and setting ratings, a view to display the rating, and a relative order number.  Categories which are defined at a lower level (e.g., globally) may not be edited. You need to save your changes after adding or removing categories"
 msgstr ""
 "Aggiungi, modifica o rimuovi categorie di gradimento.\n"
 "Puoi specificare un titolo, una descrizione, condizioni per vedere ed impostare il gradimento, una vista per visualizzare il gradimento, e un numero relativo.\n"
 "Categorie definite a livello inferiore (e.g: globalmente) non possono essere modificate. Devi salvare le tue modifiche dopo aver aggiunto o rimosso categorie"
 
-#: ./browser/interfaces.py:30
+#: ./browser/interfaces.py:33
 msgid "Assignment"
 msgstr "Assegnazione"
 
-#: ./browser/interfaces.py:11
+#: ./browser/export.py:22
+msgid "Average rating"
+msgstr "Valutazione media"
+
+#: ./browser/interfaces.py:14
 msgid "Categories"
 msgstr "Categorie"
 
-#: ./browser/interfaces.py:12
+#: ./browser/interfaces.py:15
 msgid "Category"
 msgstr "Categoria"
 
-#: ./browser/controlpanel.py:246
+#: ./browser/controlpanel.py:242
 msgid "Category Assignments"
 msgstr "Categorie di Assegnazioni"
 
-#: ./browser/controlpanel.py:259
+#: ./browser/controlpanel.py:255
 msgid "Change Portal Type"
 msgstr "Cambia tipo di contenuto"
 
@@ -52,7 +56,7 @@ msgstr "Cambia tipo di contenuto"
 msgid "Check this box to add ratings to this item. Use the control panel to select the ratings shown on each content type."
 msgstr "Seleziona questo controllo per aggiungere valutazioni a questo elemento. Usa il pannello di controllo per selezionare le valutazioni da mostrare per ogni tipo."
 
-#: ./browser/controlpanel.py:229
+#: ./browser/controlpanel.py:225
 msgid "Choose a portal type from the list and select one or more rating categories to appear on that type. "
 msgstr "Scegli un tipo di contenuto dalla lista e seleziona una o più categorie di valutazione che dovranno apparire per questo tipo. "
 
@@ -60,19 +64,27 @@ msgstr "Scegli un tipo di contenuto dalla lista e seleziona una o più categorie
 msgid "Enable Ratings"
 msgstr "Abilita valutazioni"
 
-#: ./browser/interfaces.py:36
+#: ./profiles/default/actions.xml
+msgid "Export rating"
+msgstr "Esporta valutazioni"
+
+#: ./browser/interfaces.py:39
 msgid "Local Categories"
 msgstr "Categorie Locali"
 
-#: ./browser/controlpanel.py:235
+#: ./browser/controlpanel.py:231
 msgid "Manage Categories"
 msgstr "Gestisci Categorie"
 
-#: ./browser/interfaces.py:8
+#: ./browser/export.py:22
+msgid "Number of rates"
+msgstr "Numero di valutazioni"
+
+#: ./browser/interfaces.py:10
 msgid "Portal Type"
 msgstr "Tipo di Contenuto"
 
-#: ./browser/controlpanel.py:228
+#: ./browser/controlpanel.py:224
 msgid "Rating Assignments"
 msgstr "Assegnazione Valutazioni"
 
@@ -81,24 +93,23 @@ msgstr "Assegnazione Valutazioni"
 msgid "Ratings"
 msgstr "Valutazioni"
 
-#. Default: "Ratings Settings"
-#: ./profiles/default/actionicons.xml
-msgid "Ratings Settings"
-msgstr "Impostazioni delle Valutazioni"
-
-#: ./browser/interfaces.py:22
+#: ./browser/interfaces.py:25
 msgid "Select the view for this category"
 msgstr "Seleziona la vista per questa categoria"
 
-#: ./browser/controlpanel.py:250
+#: ./browser/controlpanel.py:246
 msgid "Set the categories for portal types"
 msgstr "Imposta le categorie per i tipi di contenuto"
 
-#: ./browser/controlpanel.py:251
+#: ./browser/controlpanel.py:247
 msgid "Settings related to content ratings."
 msgstr "Impostazioni associate alle valutazioni dei contenuti."
 
-#: ./browser/interfaces.py:21
+#: ./browser/export.py:22
+msgid "URL"
+msgstr ""
+
+#: ./browser/interfaces.py:24
 msgid "View"
 msgstr "Vista"
 
