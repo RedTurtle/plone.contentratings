@@ -20,4 +20,13 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       />
+
+  <genericsetup:importStep
+      name="plone.contentratings.various"
+      title="plone.contentratings: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="plone.contentratings.setuphandlers.setupVarious">
+      <depends name="catalog"/>
+  </genericsetup:importStep>
+
 </configure>
