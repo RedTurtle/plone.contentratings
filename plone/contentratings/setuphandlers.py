@@ -26,6 +26,7 @@ def addKeyToCatalog(portal):
     indexables = []
 
     WANTED_INDEXES = (('average_rating', 'FieldIndex'),
+                      ('number_of_ratings', 'FieldIndex'),
                       ('rating_users', 'FieldIndex'),
                       )
 
