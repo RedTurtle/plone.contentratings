@@ -24,5 +24,10 @@ def average_rating(object):
 def rating_users(object):
     return _first_user_rating(object).all_raters()
 
+@indexer(IDynamicType)
+def number_of_ratings(object):
+    adapter = _first_user_rating(object)
+    return adapter.numberOfRatings
+
 def index_on_rate(obj, event):
-    obj.reindexObject(['average_rating', 'amount_of_ratings', 'rating_users'])
+    obj.reindexObject(['average_rating', 'number_of_ratings', 'rating_users'])

@@ -15,13 +15,14 @@ class ContentRatingsExportView(BrowserView):
 
     def __call__(self):
         query = Ge('average_rating', 0)
-        brains = self.context.portal_catalog.evalAdvancedQuery(query)
+	brains = self.context.portal_catalog.evalAdvancedQuery(query, (('average_rating','desc'), 'number_of_ratings',))
         response = StringIO()
         writer = csv.writer(response, delimiter=';', quoting=csv.QUOTE_ALL)
         # header
-        writer.writerow([translate(_(u"URL")), translate(_(u"Number of rates")), translate(_(u"Average rating"))])
-        for brain in brains:
-            writer.writerow([brain.getURL(), brain.number_of_ratings, brain.average_rating])
+        writer.writerow([translate(_(u"URL"), context=self.request), translate(_(u"Number of rates"), context=self.request), translate(_(u"Average rating"), context=self.request)])
+	for brain in brains:
+            if int(brain.number_of_ratings)>0:
+                writer.writerow([brain.getURL(), int(brain.number_of_ratings), brain.average_rating])
         value = response.getvalue()
         self.request.RESPONSE.setHeader('Content-Type', 'text/csv')
         self.request.RESPONSE.setHeader('Content-Disposition',
