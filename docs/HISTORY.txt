@@ -1,11 +1,12 @@
 HISTORY
 =======
 
-1.0.2-plone3 (unreleased)
-------------------
+1.0.2-plone3-01 (unreleased)
+----------------------------
 
 - Restore Plone 3 compatibility. [thet]
 - Add export ratings features [amleczko]
+- Added old style collection support [keul]
 
 1.0.1 (2012-06-04)
 ------------------
