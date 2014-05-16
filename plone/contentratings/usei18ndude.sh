@@ -16,3 +16,6 @@ find locales -type d -depth 1 \
      | grep -v .svn \
      | sed -e "s/locales\/\(.*\)$/\1/" \
      | xargs -I % i18ndude sync --pot locales/$DOMAIN.pot locales/%/LC_MESSAGES/$DOMAIN.po
+
+i18ndude rebuild-pot --pot i18n/plone.pot --create plone profiles/default
+i18ndude sync --pot i18n/plone.pot i18n/plone-??.po

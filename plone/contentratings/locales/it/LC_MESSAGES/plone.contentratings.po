@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-05-07 12:02+0000\n"
+"POT-Creation-Date: 2014-05-16 07:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Acquired Categories"
 msgstr "Categorie Acquisite"
 
-#: ./browser/controlpanel.py:232
+#: ./browser/controlpanel.py:231
 msgid "Add, modify, or remove rating categories.  You may specify a title, description, conditions for viewing and setting ratings, a view to display the rating, and a relative order number.  Categories which are defined at a lower level (e.g., globally) may not be edited. You need to save your changes after adding or removing categories"
 msgstr ""
 "Aggiungi, modifica o rimuovi categorie di gradimento.\n"
@@ -44,11 +44,11 @@ msgstr "Categorie"
 msgid "Category"
 msgstr "Categoria"
 
-#: ./browser/controlpanel.py:242
+#: ./browser/controlpanel.py:241
 msgid "Category Assignments"
 msgstr "Categorie di Assegnazioni"
 
-#: ./browser/controlpanel.py:255
+#: ./browser/controlpanel.py:254
 msgid "Change Portal Type"
 msgstr "Cambia tipo di contenuto"
 
@@ -56,7 +56,7 @@ msgstr "Cambia tipo di contenuto"
 msgid "Check this box to add ratings to this item. Use the control panel to select the ratings shown on each content type."
 msgstr "Seleziona questo controllo per aggiungere valutazioni a questo elemento. Usa il pannello di controllo per selezionare le valutazioni da mostrare per ogni tipo."
 
-#: ./browser/controlpanel.py:225
+#: ./browser/controlpanel.py:224
 msgid "Choose a portal type from the list and select one or more rating categories to appear on that type. "
 msgstr "Scegli un tipo di contenuto dalla lista e seleziona una o più categorie di valutazione che dovranno apparire per questo tipo. "
 
@@ -72,7 +72,7 @@ msgstr "Esporta valutazioni"
 msgid "Local Categories"
 msgstr "Categorie Locali"
 
-#: ./browser/controlpanel.py:231
+#: ./browser/controlpanel.py:230
 msgid "Manage Categories"
 msgstr "Gestisci Categorie"
 
@@ -84,7 +84,7 @@ msgstr "Numero di valutazioni"
 msgid "Portal Type"
 msgstr "Tipo di Contenuto"
 
-#: ./browser/controlpanel.py:224
+#: ./browser/controlpanel.py:223
 msgid "Rating Assignments"
 msgstr "Assegnazione Valutazioni"
 
@@ -97,11 +97,11 @@ msgstr "Valutazioni"
 msgid "Select the view for this category"
 msgstr "Seleziona la vista per questa categoria"
 
-#: ./browser/controlpanel.py:246
+#: ./browser/controlpanel.py:245
 msgid "Set the categories for portal types"
 msgstr "Imposta le categorie per i tipi di contenuto"
 
-#: ./browser/controlpanel.py:247
+#: ./browser/controlpanel.py:246
 msgid "Settings related to content ratings."
 msgstr "Impostazioni associate alle valutazioni dei contenuti."
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.contentratings\n"
-"POT-Creation-Date: 2014-05-07 12:02+0000\n"
+"POT-Creation-Date: 2014-05-16 07:50+0000\n"
 "PO-Revision-Date: 2009-08-27 16:49+0100\n"
 "Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
 "Language-Team: Czech <info@dms4u.cz>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Acquired Categories"
 msgstr "Zděděné kategorie"
 
-#: ./browser/controlpanel.py:232
+#: ./browser/controlpanel.py:231
 msgid "Add, modify, or remove rating categories.  You may specify a title, description, conditions for viewing and setting ratings, a view to display the rating, and a relative order number.  Categories which are defined at a lower level (e.g., globally) may not be edited. You need to save your changes after adding or removing categories"
 msgstr "Přidejte, upravte nebo zrušte kategorie hodnocení. Můžete zadat nadpis, popis, podmínky pro zobrazení a změnu hodnocení, pohled pro zobrazení hodnocení a relativní pořadí. Kategorie, které jsou definovány na nižší úrovni (například globální kategorie)  nelze změnit. Nezapoměňte po přidání nebo odebrání kategorií uložit změny."
 
@@ -38,11 +38,11 @@ msgstr "Kategorie"
 msgid "Category"
 msgstr "Kategorie"
 
-#: ./browser/controlpanel.py:242
+#: ./browser/controlpanel.py:241
 msgid "Category Assignments"
 msgstr "Přiřazení kategorií"
 
-#: ./browser/controlpanel.py:255
+#: ./browser/controlpanel.py:254
 msgid "Change Portal Type"
 msgstr "Změna typu položky"
 
@@ -50,7 +50,7 @@ msgstr "Změna typu položky"
 msgid "Check this box to add ratings to this item. Use the control panel to select the ratings shown on each content type."
 msgstr "Zaškrtnutím tohoto pole povolíte hodnocení této položky. V nastavení portálu můžete vybrat, které typy hodnocení budou zobrazeny u příslužných typů položek."
 
-#: ./browser/controlpanel.py:225
+#: ./browser/controlpanel.py:224
 msgid "Choose a portal type from the list and select one or more rating categories to appear on that type. "
 msgstr "Vyberte typ položky ze seznamu a vyberte jednu nebo více kategorií, které budou u tohoto typu položek povoleny."
 
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Local Categories"
 msgstr "Místní kategorie"
 
-#: ./browser/controlpanel.py:231
+#: ./browser/controlpanel.py:230
 msgid "Manage Categories"
 msgstr "Správa kategorií"
 
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Portal Type"
 msgstr "Typ položky"
 
-#: ./browser/controlpanel.py:224
+#: ./browser/controlpanel.py:223
 msgid "Rating Assignments"
 msgstr "Přiřazení hodnocení"
 
@@ -91,11 +91,11 @@ msgstr "Hodnocení"
 msgid "Select the view for this category"
 msgstr "Vyberte pohled (view) pro tuto kategorii"
 
-#: ./browser/controlpanel.py:246
+#: ./browser/controlpanel.py:245
 msgid "Set the categories for portal types"
 msgstr "Vyberte kategorie pro typy položek"
 
-#: ./browser/controlpanel.py:247
+#: ./browser/controlpanel.py:246
 msgid "Settings related to content ratings."
 msgstr "Nastavení hodnocení položek"
 

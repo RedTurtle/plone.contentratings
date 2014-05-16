@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plone.contentratings\n"
-"POT-Creation-Date: 2014-05-07 12:02+0000\n"
+"POT-Creation-Date: 2014-05-16 07:50+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Daniel Widerin <daniel.widerin@kombinat.at>\n"
 "Language-Team: Kombinat Media Gestalter GmbH <office@kombinat.at>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Acquired Categories"
 msgstr "Übernommene Kategorien"
 
-#: ./browser/controlpanel.py:232
+#: ./browser/controlpanel.py:231
 msgid "Add, modify, or remove rating categories.  You may specify a title, description, conditions for viewing and setting ratings, a view to display the rating, and a relative order number.  Categories which are defined at a lower level (e.g., globally) may not be edited. You need to save your changes after adding or removing categories"
 msgstr "Kategorien können hier hinzugefügt, bearbeitet oder gelöscht werden. Sie können einen Titel, eine Beschreibung, Bedingungen zum Anzeigen oder Bewerten, eine Sortiernummer und eine Ansicht angeben. Kategorien die in einer tieferen Ebene definiert wurden können nicht bearbeitet werden. Sie müssen Ihre Änderungen nach dem Hinzufügen oder Löschen speichern."
 
@@ -40,11 +40,11 @@ msgstr "Kategorien"
 msgid "Category"
 msgstr "Kategorie"
 
-#: ./browser/controlpanel.py:242
+#: ./browser/controlpanel.py:241
 msgid "Category Assignments"
 msgstr "Kategoriezuweisungen"
 
-#: ./browser/controlpanel.py:255
+#: ./browser/controlpanel.py:254
 msgid "Change Portal Type"
 msgstr "Artikeltyp ändern"
 
@@ -52,7 +52,7 @@ msgstr "Artikeltyp ändern"
 msgid "Check this box to add ratings to this item. Use the control panel to select the ratings shown on each content type."
 msgstr "Aktivieren Sie diese Checkbox um Bewertungen für dieses Element zuzulassen. Verwenden Sie die Konfiguration um die Bewertungen für jeden Artikeltyp festzulegen."
 
-#: ./browser/controlpanel.py:225
+#: ./browser/controlpanel.py:224
 msgid "Choose a portal type from the list and select one or more rating categories to appear on that type. "
 msgstr "Wählen Sie einen Artikeltyp aus der Liste und markieren Sie eine oder mehrere Kategorien für diesen Typ."
 
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Local Categories"
 msgstr "Lokale Kategorien"
 
-#: ./browser/controlpanel.py:231
+#: ./browser/controlpanel.py:230
 msgid "Manage Categories"
 msgstr "Kategorien verwalten"
 
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Portal Type"
 msgstr "Artikeltyp"
 
-#: ./browser/controlpanel.py:224
+#: ./browser/controlpanel.py:223
 msgid "Rating Assignments"
 msgstr "Bewertungen zuweisen"
 
@@ -93,11 +93,11 @@ msgstr "Bewertungen"
 msgid "Select the view for this category"
 msgstr "Ansicht für diese Kategorie"
 
-#: ./browser/controlpanel.py:246
+#: ./browser/controlpanel.py:245
 msgid "Set the categories for portal types"
 msgstr "Kategorie für diesen Artikeltyp festlegen"
 
-#: ./browser/controlpanel.py:247
+#: ./browser/controlpanel.py:246
 msgid "Settings related to content ratings."
 msgstr "Einstellungmöglichkeiten des Bewertungssystem"
 

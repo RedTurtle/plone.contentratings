@@ -1,0 +1,36 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-16 07:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+"X-Is-Fallback-For: it-ch it-it\n"
+
+#: profiles/default/portal_atct.xml
+msgid "Average rating"
+msgstr "Valutazione media"
+
+#: profiles/default/portal_atct.xml
+msgid "Average rating of all votes"
+msgstr "Media delle valutazioni di tutti i voti"
+
+#: profiles/default/portal_atct.xml
+msgid "How many votes the item got"
+msgstr "Quante valutazione l'elemento ha ricevuto"
+
+#: profiles/default/portal_atct.xml
+msgid "Number of ratings"
+msgstr "Numero di valutazioni"
+
