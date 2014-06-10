@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-1.0.2-plone3-01 (unreleased)
+1.0.2-plone3-01 (2014-06-10)
 ----------------------------
 
 - Restore Plone 3 compatibility. [thet]
