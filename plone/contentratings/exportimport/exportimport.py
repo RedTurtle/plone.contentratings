@@ -7,7 +7,11 @@ from sets import Set
 
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
-from zope.app.component.hooks import getSite
+try:
+    from zope.component.interfaces import ISite
+except ImportError:
+    # Plone <4.1
+    from zope.app.component.interfaces import ISite
 
 from Products.GenericSetup.utils import XMLAdapterBase
 from Products.GenericSetup.utils import exportObjects

@@ -1,5 +1,8 @@
 import logging
-from zope.app.component.hooks import setSite
+try:
+    from zope.component.hooks import setSite
+except ImportError:
+    from zope.app.component.hooks import setSite
 from zope.component import getSiteManager
 from plone.contentratings.browser.interfaces import ICategoryContainer
 from Products.CMFCore.utils import getToolByName

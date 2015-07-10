@@ -37,6 +37,7 @@ setup(name='plone.contentratings',
       install_requires=[
           'setuptools',
           'contentratings>=1.0',
+          'Products.AdvancedQuery',
           'archetypes.schemaextender',
       ],
       entry_points="""

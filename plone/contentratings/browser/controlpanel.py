@@ -3,7 +3,11 @@ from Products.CMFCore.utils import getToolByName
 from cStringIO import StringIO
 from plone.app.controlpanel.form import ControlPanelForm
 from plone.fieldsets.fieldsets import FormFieldsets
-from zope.app.component.interfaces import ISite
+try:
+    from zope.component.interfaces import ISite
+except ImportError:
+    # Plone <4.1
+    from zope.app.component.interfaces import ISite
 from zope.app.form.browser.objectwidget import ObjectWidget
 from zope.component import adapts
 from zope.component import getUtility

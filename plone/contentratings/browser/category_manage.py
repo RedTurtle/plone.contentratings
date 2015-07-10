@@ -1,20 +1,46 @@
 from zope.interface import implements, alsoProvides
 from zope.component import adapts, getSiteManager, queryUtility
-from zope.app.component import queryNextSiteManager
+try:
+    from zope.app.component import queryNextSiteManager
+except ImportError:
+    # Copied from deprecated zope.app.component 3.4.0
+    from zope.component import getGlobalSiteManager
+    def queryNextSiteManager(context, default=None):
+        """Get the next site manager.
+    
+        If the site manager of the given context is the global site manager, then
+        `default` is returned.
+        """
+        sm = getSiteManager(context)
+        if sm is getGlobalSiteManager():
+            return default
+    
+        bases = sm.__bases__
+        if not bases:
+            return getGlobalSiteManager()
+        return bases[0]
+
 from zope.app.form import CustomWidgetFactory
 from zope.app.form.interfaces import MissingInputError
 from zope.app.form.browser import ObjectWidget, ListSequenceWidget, SequenceDisplayWidget
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+try:
+    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
+except ImportError:
+    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from zope.schema import getFieldsInOrder
-from zope.app.component.interfaces import ISite
+try:
+    from zope.component.interfaces import ISite
+except ImportError:
+    # Plone <4.1
+    from zope.app.component.interfaces import ISite
 
 from plone.i18n.normalizer.interfaces import IURLNormalizer
 from plone.contentratings.browser.interfaces import ICategoryContainer
 from contentratings.interfaces import IUserRating
 from contentratings.interfaces import IRatingCategory, _
 from contentratings.category import RatingsCategoryFactory
-
 from Products.CMFCore.interfaces import IDynamicType
+
 
 class CategoryContainerAdapter(object):
     """Adapter for site root to ICategoryContainer.  This provides mechanisms

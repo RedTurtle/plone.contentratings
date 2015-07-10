@@ -1,6 +1,10 @@
 from zope.interface import implements, Interface
 from zope.component import getSiteManager
-from zope.app.component.hooks import getSite
+try:
+    from zope.component.hooks import getSite
+except ImportError:
+    from zope.app.component.hooks import getSite
+
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
@@ -8,6 +12,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.interfaces import IDynamicType
 from contentratings.interfaces import IUserRating
 from contentratings.browser.interfaces import IRatingView
+
 
 class UserCategoryVocab(object):
     """Vocabulary of all categories providing IUserRating"""

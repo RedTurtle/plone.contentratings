@@ -4,7 +4,7 @@ HISTORY
 1.0.2-plone3-02 (unreleased)
 ----------------------------
 
-- Nothing changed yet.
+- Works also on Plone 4.3 [keul]
 
 
 1.0.2-plone3-01 (2014-06-10)

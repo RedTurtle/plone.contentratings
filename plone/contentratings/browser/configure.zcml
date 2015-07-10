@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plone.contentratings">
 
@@ -24,33 +25,62 @@
     <adapter factory=".category_manage.CategoryContainerAdapter" />
     
     <!-- Control panel for plone.contentratings -->
+    <configure zcml:condition="installed zope.app.component">
+        <browser:page
+            name="contentratings-controlpanel"
+            for="zope.app.component.interfaces.ISite"
+            class=".controlpanel.ContentRatingsControlPanel"
+            permission="cmf.ManagePortal"
+            />
+    
+        <browser:page
+            name="contentratings-export"
+            for="zope.app.component.interfaces.ISite"
+            class=".export.ContentRatingsExportView"
+            permission="plone.contentratings.permissions.ExportRating"
+            />
 
-    <browser:page
-        name="contentratings-controlpanel"
-        for="zope.app.component.interfaces.ISite"
-        class=".controlpanel.ContentRatingsControlPanel"
-        permission="cmf.ManagePortal"
-        />
+        <browser:pages
+            for="zope.app.component.interfaces.ISite"
+            zcml:condition="installed kss.core"
+            class=".kss_ratings.ControlPanelKSSView"
+            permission="cmf.ManagePortal">
+          <page name="refreshCategories"
+                attribute="refresh_categories"/>
+          <page name="saveRatingAssignments"
+                attribute="save_rating_assignments" />
+        </browser:pages>
+    </configure>
+    <configure zcml:condition="not-installed zope.app.component">
+        <browser:page
+            name="contentratings-controlpanel"
+            for="zope.component.interfaces.ISite"
+            class=".controlpanel.ContentRatingsControlPanel"
+            permission="cmf.ManagePortal"
+            />
+    
+        <browser:page
+            name="contentratings-export"
+            for="zope.component.interfaces.ISite"
+            class=".export.ContentRatingsExportView"
+            permission="plone.contentratings.permissions.ExportRating"
+            />
+    
+        <browser:pages
+            for="zope.component.interfaces.ISite"
+            zcml:condition="installed kss.core"
+            class=".kss_ratings.ControlPanelKSSView"
+            permission="cmf.ManagePortal">
+          <page name="refreshCategories"
+                attribute="refresh_categories"/>
+          <page name="saveRatingAssignments"
+                attribute="save_rating_assignments" />
+        </browser:pages>
+    </configure>
 
-    <browser:page
-        name="contentratings-export"
-        for="zope.app.component.interfaces.ISite"
-        class=".export.ContentRatingsExportView"
-        permission="plone.contentratings.permissions.ExportRating"
-        />
-
-    <browser:pages
-        for="zope.app.component.interfaces.ISite"
-        class=".kss_ratings.ControlPanelKSSView"
-        permission="cmf.ManagePortal">
-      <page name="refreshCategories"
-            attribute="refresh_categories"/>
-      <page name="saveRatingAssignments"
-            attribute="save_rating_assignments" />
-    </browser:pages>
-        
     <browser:pages
         for="*"
+        zcml:condition="installed kss.core"
         class=".kss_ratings.RatingKSSView"
         permission="zope.Public">
       <page name="updateRating"
@@ -61,6 +91,7 @@
         
     <browser:pages
         for="*"
+        zcml:condition="installed kss.core"
         class=".kss_ratings.EditorialKSSView"
         permission="zope.Public">
       <page name="updateEditorRating"
